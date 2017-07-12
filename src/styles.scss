@@ -1,0 +1,27 @@
+/**
+ * This is the root of the application global styles.
+ * All these styles are available over the complete app.
+ *
+ * Component specific styles should be placed in the components itself.
+*/
+
+/***************************************************************************************************
+ * Customization
+ */
+
+// This file must be loaded first to customize bootstrap and other 3th party
+@import './styles/_variables.scss';
+
+/***************************************************************************************************
+ * 3th party modules
+ */
+@import '~bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+@import '~font-awesome/css/font-awesome.css';
+
+/***************************************************************************************************
+ * Global app styling
+ */
+
+//
+// Add your app style here
+//

@@ -1,0 +1,15 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/app",
+    "module": "commonjs",
+    "baseUrl": "",
+    "types": []
+  },
+  "exclude": [
+    "setupJest.ts",
+    "test/**.*.ts",
+    "**/*.spec.ts",
+    "**/*.sample.ts"
+  ]
+}
