@@ -9,7 +9,7 @@
     "build": "node build/build.js",
     "lint": "tslint --project tsconfig.json --type-check --format stylish",
     "vuetype": "vuetype src/components",
-    "test": "karma start test/karma.conf.js --single-run",
+    "test": "karma start test/karma.conf.js",
     "format": "prettier --semi --single-quote --trailing-comma all --parser typescript --write './src/**/*.{ts,scss}'"
   },
   "dependencies": {

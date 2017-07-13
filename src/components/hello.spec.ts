@@ -1,12 +1,11 @@
 import { mount } from 'avoriaz';
 
-// Need to import with require because there is no typings
-// available via *.vue files
-// const Hello = require('./Hello.vue');
-//
-// by using hello.vue.d.ts we can import vue files
+// by using hello.vue.d.ts we can import typed vue files
+// import Hello from './hello.vue';
+// const component = new Hello();
 
-import Hello from './hello.vue';
+import Hello from './hello';
+import HelloComponent from './hello.vue';
 const $t = function(arg) {
   return arg;
 };
@@ -18,7 +17,7 @@ describe('Hello Component', () => {
 
   it('should renders correctly', () => {
     // render component as a single unit
-    const fixture = mount(Hello, {
+    const fixture = mount(HelloComponent, {
       globals: { $t },
     });
     fixture.setData({ msg: 'Hello World' });
