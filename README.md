@@ -47,7 +47,8 @@ yarn build --report
 - [x] Add karma unit testing
 - [x] Add prettier support
 - [x] Add vue-i18n
-- [ ] Add Vuex
+- [x] Add Vuex (draft)
+- [x] Add Axios (draft)
 
 ## Issues
 

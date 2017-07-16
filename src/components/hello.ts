@@ -1,25 +1,21 @@
 import Vue from 'vue';
-
-// more info: https://github.com/vuejs/vue-class-component
+import Vuex from 'vuex';
 import Component from 'vue-class-component';
 
-/**
- * Alternative import template as string and
- * attach to component.
- */
-// import template from './hello.html';
-//
-// @Component({
-//   template,
-// })
-// export default class Hello extends Vue {
-// }
+import { IAppState } from '../store';
+import { CART_INCREMENT } from '../store/mutation-types';
 
-@Component
+@Component(
+  {
+    // add more options here
+  },
+)
 export default class Hello extends Vue {
   msg = 'Welcome to Your Vue.js App';
+  store: Vuex.Store<IAppState> = this['$store'];
 
   constructor() {
     super();
+    this.store.commit(CART_INCREMENT, 1);
   }
 }

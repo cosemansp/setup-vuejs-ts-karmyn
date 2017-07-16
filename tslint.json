@@ -11,6 +11,8 @@
     ],
     "no-require-imports": false,
     "no-var-requires": false,
-    "trailing-comma-interface": false
+    "trailing-comma-interface": false,
+    "no-shadowed-variable": false,
+    "prefer-function-over-method": false
   }
 }

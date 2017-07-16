@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import * as Logger from 'js-logger';
 
-import { local } from './core/utils/storage';
+import { local, session } from './core/utils/storage';
 import config from './config';
 
 import App from './App.vue';
@@ -13,6 +13,8 @@ import './polyfills';
 
 // Load global styles
 import './styles.scss';
+
+import store from './store';
 
 // Setup vue
 Vue.config.productionTip = true;
@@ -27,6 +29,7 @@ new Vue({
   el: '#app',
   i18n,
   router,
+  store,
   template: '<App/>',
   components: { App },
   created() {
@@ -35,5 +38,6 @@ new Vue({
 
     // setup localStorage prefix
     local.prefix = 'myApp';
+    session.prefix = 'myApp';
   },
 });
